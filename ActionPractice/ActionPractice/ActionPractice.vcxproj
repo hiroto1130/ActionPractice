@@ -145,6 +145,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Singleton.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="Graphic.cpp" />
   </ItemGroup>
@@ -152,6 +153,7 @@
     <ClInclude Include="Device.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="DirectX.h" />
+    <ClInclude Include="Singleton.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="Graphic.h" />
   </ItemGroup>
