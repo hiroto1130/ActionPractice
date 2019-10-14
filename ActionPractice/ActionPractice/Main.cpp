@@ -8,12 +8,13 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR lpCmpLine, IN
 {
 
 	HWND* hWnd;
+	Engine engine = singleton<Engine>::get_instance();
 	Window window = singleton<Window>::get_instance();
 	DirectX directX = singleton<DirectX>::get_instance();
 	Device device = singleton<Device>::get_instance();
 	Texture texture = singleton<Texture>::get_instance();
 
-	if ((hWnd = InitEngine(800, 600, hInst, &directX, window, device)) == NULL)
+	if ((hWnd = engine.InitEngine(800, 600, hInst, &directX, window, device)) == NULL)
 	{
 		return 0;
 	}
@@ -42,8 +43,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR lpCmpLine, IN
 		{
 			if (time - prevtime < 1000 / 60) {
 
-				device.UpdateKeyStatus(&directX);
-				DrawStart(&directX);
+				engine.DrawStart(&directX);
 
 
 
@@ -51,7 +51,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR lpCmpLine, IN
 
 
 
-				DrawEnd(directX);
+				engine.DrawEnd(directX);
 
 				time = timeGetTime();
 			}
@@ -64,7 +64,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR lpCmpLine, IN
 	timeEndPeriod(1);
 
 	// エンジン終了
-	EndEngine(directX);
+	engine.EndEngine(directX);
 
 	//　クラスの開放処理
 	SingletonFinalizer::finalize();
