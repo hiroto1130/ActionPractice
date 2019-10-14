@@ -12,6 +12,9 @@
     <Filter Include="Singleton">
       <UniqueIdentifier>{51f5bd4f-f664-4b74-b3dc-0161763f0664}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{e11affd3-d63c-4b0d-823c-deab620b87cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -32,6 +35,9 @@
     <ClCompile Include="Singleton.cpp">
       <Filter>Singleton</Filter>
     </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Device.h">
@@ -51,6 +57,9 @@
     </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
