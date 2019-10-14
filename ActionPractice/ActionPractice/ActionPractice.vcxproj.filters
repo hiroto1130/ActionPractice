@@ -40,5 +40,8 @@
     <ClInclude Include="Graphic.h">
       <Filter>DirectX</Filter>
     </ClInclude>
+    <ClInclude Include="DirectX.h">
+      <Filter>DirectX</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
