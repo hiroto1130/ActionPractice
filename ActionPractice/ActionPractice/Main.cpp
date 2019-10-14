@@ -40,20 +40,21 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInstance, LPSTR lpCmpLine, IN
 		}
 		else
 		{
-
-
 			if (time - prevtime < 1000 / 60) {
 
 				device.UpdateKeyStatus(&directX);
 				DrawStart(&directX);
 
+
+
+
+
+
+
 				DrawEnd(directX);
 
 				time = timeGetTime();
 			}
-
-
-
 
 			prevtime = time;
 		}
