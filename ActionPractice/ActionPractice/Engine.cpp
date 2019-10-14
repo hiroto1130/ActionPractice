@@ -1,6 +1,6 @@
 ﻿#include "Engine.h"
 
-HWND* InitEngine(int width, int height, HINSTANCE hInst, DirectX* directX, Window window, Device device)
+HWND* Engine::InitEngine(int width, int height, HINSTANCE hInst, DirectX* directX, Window window, Device device)
 {
 	HWND hWnd = NULL;
 	static CHAR szAppName[] = "";
@@ -18,7 +18,7 @@ HWND* InitEngine(int width, int height, HINSTANCE hInst, DirectX* directX, Windo
 	return &hWnd;
 }
 
-void EndEngine(DirectX directX)
+void Engine::EndEngine(DirectX directX)
 {
 
 	if (directX.pDinput != nullptr)
@@ -49,7 +49,7 @@ void EndEngine(DirectX directX)
 
 }
 
-bool DrawStart(DirectX* directX)
+bool Engine::DrawStart(DirectX* directX)
 {
 	directX->pDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0x00, 0x00, 0x00), 1.0f, 0);
 
@@ -65,13 +65,13 @@ bool DrawStart(DirectX* directX)
 	return false;
 }
 
-void DrawEnd(DirectX directX)
+void Engine::DrawEnd(DirectX directX)
 {
 	directX.pDevice->EndScene();
 	directX.pDevice->Present(NULL, NULL, NULL, NULL);
 }
 
-void UpdateInput(DirectX* directX, Device device)
+void Engine::UpdateInput(DirectX* directX, Device device)
 {
 	device.UpdateKeyStatus(directX);
 }

@@ -5,18 +5,21 @@
 #include"Window.h"
 #include"Device.h"
 
+class Engine
+{
+private:
+public:
 
+	HWND* InitEngine(int width, int height, HINSTANCE hInst, DirectX* directX, Window window, Device device);
 
-//Pointa Point;
+	void EndEngine(DirectX directX);
 
-HWND* InitEngine(int width, int height, HINSTANCE hInst, DirectX* directX, Window window, Device device);
+	bool DrawStart(DirectX* directX);
 
-void EndEngine(DirectX directX);
+	void DrawEnd(DirectX directX);
 
-bool DrawStart(DirectX* directX);
+	void UpdateInput(DirectX* directX, Device device);
 
-void DrawEnd(DirectX directX);
-
-void UpdateInput(DirectX* directX, Device device);
+};
 
 #endif // !1
