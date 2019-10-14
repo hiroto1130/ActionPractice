@@ -51,6 +51,8 @@ HRESULT Device::InitD3d(HWND* hInst, DirectX* directX)
 
 	// 3d // 
 
+	/*
+
 	// Xファイルからメッシュをロードする	
 	LPD3DXBUFFER pD3DXMtrlBuffer = NULL;
 
@@ -90,6 +92,7 @@ HRESULT Device::InitD3d(HWND* hInst, DirectX* directX)
 	directX->pDevice->SetRenderState(D3DRS_AMBIENT, 0x00111111);
 	// スペキュラ（鏡面反射）を有効にする
 	directX->pDevice->SetRenderState(D3DRS_SPECULARENABLE, TRUE);
+	*/
 
 	return S_OK;
 
